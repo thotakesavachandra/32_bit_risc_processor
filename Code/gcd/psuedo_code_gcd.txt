@@ -1,0 +1,15 @@
+ADDI R1,R0,V1       // loading A into R1
+ADDI R2,R0,V2       // loading B into R2
+SUB CMP,R1,R2       // check if R1==R2                  // FOR LABEL
+BZ  CMP ENDFOR
+BMI CMP BGA         // if A < B jump to BGA label
+SUB R1,R1,R2        // A <= A-B
+B FOR
+SUB R2,R2,R1        // B <= B-A                         // BGA LABEL
+B FOR
+NOP                 // precaution                       // ENDFOR LABEL
+NOP
+ST  R1,0(R0)        // Store R1. Just for showing      
+NOP
+NOP
+HALT

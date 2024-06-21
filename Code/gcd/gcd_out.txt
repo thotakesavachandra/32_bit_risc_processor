@@ -1,0 +1,170 @@
+WARNING: alu.v:907: $readmemb(./gcd/binary_instr_gcd.txt): Not enough words in the file for the requested range [0:1023].
+*****************************
+opcode : 32
+PC :          0
+SP :       1024
+ALU out :         15
+MEM out :          x
+mem_addr :         15
+*****************************
+opcode : 32
+PC :          4
+SP :       1024
+ALU out :         20
+MEM out :          x
+mem_addr :         20
+*****************************
+opcode :  1
+PC :          8
+SP :       1024
+ALU out : 4294967291
+MEM out :          x
+mem_addr : 4294967291
+*****************************
+opcode : 47
+PC :         12
+SP :       1024
+ALU out :         36
+MEM out :          x
+mem_addr :         36
+*****************************
+opcode : 45
+PC :         16
+SP :       1024
+ALU out :         28
+MEM out :          x
+mem_addr :         28
+*****************************
+opcode :  1
+PC :         28
+SP :       1024
+ALU out :          5
+MEM out :          x
+mem_addr :          5
+*****************************
+opcode : 44
+PC :         32
+SP :       1024
+ALU out :          8
+MEM out :          x
+mem_addr :          8
+*****************************
+opcode :  1
+PC :          8
+SP :       1024
+ALU out :         10
+MEM out :          x
+mem_addr :         10
+*****************************
+opcode : 47
+PC :         12
+SP :       1024
+ALU out :         36
+MEM out :          x
+mem_addr :         36
+*****************************
+opcode : 45
+PC :         16
+SP :       1024
+ALU out :         28
+MEM out :          x
+mem_addr :         28
+*****************************
+opcode :  1
+PC :         20
+SP :       1024
+ALU out :         10
+MEM out :          x
+mem_addr :         10
+*****************************
+opcode : 44
+PC :         24
+SP :       1024
+ALU out :          8
+MEM out :          x
+mem_addr :          8
+*****************************
+opcode :  1
+PC :          8
+SP :       1024
+ALU out :          5
+MEM out :          x
+mem_addr :          5
+*****************************
+opcode : 47
+PC :         12
+SP :       1024
+ALU out :         36
+MEM out :          x
+mem_addr :         36
+*****************************
+opcode : 45
+PC :         16
+SP :       1024
+ALU out :         28
+MEM out :          x
+mem_addr :         28
+*****************************
+opcode :  1
+PC :         20
+SP :       1024
+ALU out :          5
+MEM out :          x
+mem_addr :          5
+*****************************
+opcode : 44
+PC :         24
+SP :       1024
+ALU out :          8
+MEM out :          x
+mem_addr :          8
+*****************************
+opcode :  1
+PC :          8
+SP :       1024
+ALU out :          0
+MEM out :          x
+mem_addr :          0
+*****************************
+opcode : 47
+PC :         12
+SP :       1024
+ALU out :         36
+MEM out :          x
+mem_addr :         36
+*****************************
+opcode : 51
+PC :         36
+SP :       1024
+ALU out :          0
+MEM out :          x
+mem_addr :          0
+*****************************
+opcode : 51
+PC :         40
+SP :       1024
+ALU out :          0
+MEM out :          x
+mem_addr :          0
+*****************************
+opcode : 42
+PC :         44
+SP :       1024
+ALU out :          0
+MEM out :          x
+mem_addr :          0
+===============================> Memory Write Data in :          5  <==============
+*****************************
+opcode : 51
+PC :         48
+SP :       1024
+ALU out :          0
+MEM out :          5
+mem_addr :          0
+*****************************
+opcode : 51
+PC :         52
+SP :       1024
+ALU out :          0
+MEM out :          5
+mem_addr :          0

@@ -1,0 +1,61 @@
+B MAIN
+SUB R15,R1,R2       // CMP(R15) = START - END                   // B_SORT LABEL
+BZ R15, #RET_B      // if CMP == 0 RETURN (recursion base case)
+ADDI R3,R1,0        // curr <= start    
+ADDI R4,R3,4        // next <= curr+4
+SUB R15,R4,R2       // IF ONLY ONE ELEMENT IS PRESENT IN ARRAY  //  START OF FOR LOOP
+BZ R15, #ENDFOR     // 
+LD  R5,0(R3)        // A(R5) <= MEM[CURR(R3)]
+LD  R6,0(R4)        // B(R6) <= MEM[NEXT(R4)]
+SUB R15,R5,R6       // CMP <= A - B ****************negative value check alert*****
+BMI R15, #SKIPSWAP  // IF A<B NO NEED TO SKIPSWAP
+ST  R5, 0(R4)       // MEM[NEXT(R4)] <= A(R5)
+ST  R6, 0(R3)       // MEM[CURR(R3)] <= B(R6)
+ADDI R3,R3,4        // INCREMENT CURR TO THE NEXT NUMBER        // SKIPSWAP LABEL
+ADDI R4,R4,4        // INCREMENT NEXT TO NEXT NUMBER        
+B #FOR              // JUMP TO NEXT ITERATION
+SUBI R2,R2,4      // DECREMENT THE END                        // ENDFOR LABEL
+CALL B_SORT
+ADDI R2,R2,4      // RESTORE THE END
+RET                 // RETURN TO PREVIOUS LEVEL                 // RET_B LABEL
+ADDI R1,R0,0        // START <= 0                               // MAIN LABEL
+ADDI R2,R0,0        // END <= 0
+ADDI R3,R0,V1       // R3 <= VALUE 1 **************
+ST   R3,0(R2)       // MEM[END(R2)] <= R3
+ADDI R2,R2,4        // INCREMENT END TO LAST
+ADDI R3,R0,V2       // R3 <= VALUE 2 **************
+ST   R3,0(R2)       // MEM[END(R2)] <= R3
+ADDI R2,R2,4        // INCREMENT END TO LAST
+ADDI R3,R0,V3       // R3 <= VALUE 3 **************
+ST   R3,0(R2)       // MEM[END(R2)] <= R3
+ADDI R2,R2,4        // INCREMENT END TO LAST
+ADDI R3,R0,V4       // R3 <= VALUE 4 **************
+ST   R3,0(R2)       // MEM[END(R2)] <= R3
+ADDI R2,R2,4        // INCREMENT END TO LAST
+ADDI R3,R0,V5       // R3 <= VALUE 5 **************
+ST   R3,0(R2)       // MEM[END(R2)] <= R3
+ADDI R2,R2,4        // INCREMENT END TO LAST
+NOP                 // VALUE 6 CAN BE ADDED HERE
+NOP 
+NOP
+NOP                 // VALUE 7 CAN BE ADDED HERE
+NOP
+NOP
+NOP                 // VALUE 8 CAN BE ADDED HERE
+NOP
+NOP
+CALL B_SORT            // CALL BUBBLE_SORT
+ADDI R3,R1,0        // PTR(R3) <= START(R1)
+SUB  R15,R3,R2      // CMP <= PTR - END                         // PRINT_LOOP LABEL
+BZ R15, #END_PROG   // IF PTR == END JUMP TO END
+LD   R4,0(R3)       // DUMMY(R4) <= PTR(R3) | SHOW MEMOUT HERE
+ADDI R3,R3,4        // PTR <= PTR + 4
+B #PRINT_LOOP
+HALT                // END OF PROGRAM                           // END_PROG LABEL
+
+
+
+///////////////////  BRANCH CHANGED FROM PC + IMM T0 DIRECT IMM
+//////////////////   SAME FOR BMI BPL BZ
+////////////////// AS 0(RS) + Imm is required for PC direct branching
+////////////////// RT is used for comparision in comparision block

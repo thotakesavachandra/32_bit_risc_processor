@@ -1,0 +1,38 @@
+***********************************************
+21CS30030	Kovvada Dhyana Vardhan
+21CS30056	Thota Kesava Chandra
+***********************************************
+
+
+Psuedo Code similar to MIPS is attached in the respective folders with "psuedo_code" label.
+Binary instructions are also attached (These are the 32-bit instructions that are loaded into instruction memory and are later executed).
+Output of the sample run of the programs is also attached.
+
+
+Two programs have been writtem: 
+    1) Bubble sort
+    2) GCD
+   
+Bubble Sort:
+	For bubble sort. We have loaded 5 values into memory. 
+	The START pointer will point to the starting address of the values. And END pointer points to the next of last element.
+	The function B_SORT is called.
+	The function then checks immediate values and swaps the values when required to push the highest element to the last.
+	Then the end pointer is decremented and B_SORT is called again on the remaining values.
+	Once the base case (START==END or no elements) is reached the function is returned.
+	Finally the values are loading into a dummy register in order of their memory appearance from initial START to END pointer.
+	This happens in PC=200 instruction. The same is shown as output in the output file.
+	Sample Run :
+		inserted values in order : 235, 121, 69, 17, 198
+		Final output in the last : 17, 69, 121, 198, 235
+
+
+GCD :
+	We have loaded the values in two registers R1,R2.
+	Loop is repeated till the values become equal.
+	If A>B then A = A-B.
+	If B>A then B = B-A.
+	The final value of A is loaded into a dummy memory location to see the result.
+	Sample Run:
+		inserted values : A = 15 ; B = 20;
+		output GCD : 5
